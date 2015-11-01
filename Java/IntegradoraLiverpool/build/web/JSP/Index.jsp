@@ -39,6 +39,7 @@
     <%@include file="/CSS/screen.css" %>
     
     <%@include file="/CSS/prettyPhoto.css"%>
+    <%@include file="/Admin/css/style.css" %>
 </style>
 
 <link rel="stylesheet" href="CSS/base.css"/>
@@ -66,14 +67,14 @@
   <div class="container"> 
     <!-- Header | Logo, Menu
 		================================================== -->
-    <div class="logo"><img src="<s:url value='/images/oie_transparent.png'/>" style='float:left'/></a></div>
+    <div class="logo"><img src="<s:url value='/images/oie_transparent.png'/>" style='float:left'/></div>
     
    
     
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="<s:url value='/JSP/Index.jsp'/>" id="visited">Home</a></li>
+          <li><a href="<s:url value='/JSP/Index.jsp'/>" id="visited">Inicio</a></li>
           <li><a href="<s:url value='/JSP/about.jsp'/>">About</a></li>
           <li><a href="<s:url value='/JSP/portfolio.jsp'/>">Portfolio</a>
             <ul>
@@ -85,9 +86,29 @@
               <li><a href="<s:url value='/JSP/singleblog.jsp'/>">Single Post</a></li>
             </ul>
           </li>
-          <li><a href="<s:url value='/JSP/features.jsp'/>">Features</a></li>
           <li><a href="<s:url value='/JSP/contact.jsp'/>">Contact</a></li>
-            
+         <!--- <li> <a href="#" id="loginButton"><span>Login</span></a></li>-->
+         <li><a href="<s:url value='#'/> " id="loginButton"><span>Iniciar sesión</span></a></li>
+         <div style="clear:both"></div>
+                <div id="loginBox">                
+                    <form id="loginForm">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Correo</label>
+                                <input type="text" name="email" id="email" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Contraseña</label>
+                                <input type="password" name="password" id="password" />
+                            </fieldset>
+                            <s:submit id="login" value="Aceptar"/>
+                           <!-- <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>-->
+                        </fieldset>
+                       <!--- <span><a href="#">Forgot your password?</a></span>-->
+                    </form>
+                </div>
+            </div>
+        
         </ul>
       </div>
       <!-- mainmenu ends here --> 
@@ -104,6 +125,7 @@
           <option value='/JSP/singleblog.jsp'>Single Post</option>
           <option value='/JSP/features.jsp'>Features</option>
           <option value='/JSP/contact.jsp'>Contact</option>
+           <option value='/Admin/login.jsp'>Login</option>
         </select>
       </form>
     </div>
@@ -152,8 +174,8 @@
 <div class="infobox">
   <div class="container info">
     <header>
-      <h1>Introducing Freebix!</h1>
-      <p class="infop">- Free, fully <span class="pink">responsive HTML</span> site template made by <a href="http://www.anarieldesign.com/" rel="nofollow"><strong>Anariel Design</strong></a> -</p>
+      <h1>Categorías de productos</h1>
+     <!-- <p class="infop"><strong>Liverpool, </strong> es parte de tu vida.</p>-->
     </header>
     <hr class="separator">
   </div>
@@ -162,41 +184,132 @@
 <!-- infobox ends here --> 
 <!--Latest Photos ==================================================
 ================================================== -->
-<div class="container latest">
-  <div class="one_third">
-    <figure class="shadow"><a href="#" class="thumb"><img src="images/portfolio/a.jpg" alt="alt" /></a>
-      <figcaption> <a href="#">
-        <h3 class="heading">Retro Movie</h3>
-        </a>
-        <p class="bioquote">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. </p>
-      </figcaption>
-    </figure>
-  </div>
-  <!-- one_third ends here -->
-  <div class="one_third">
-    <figure class="shadow"><a href="#" class="thumb"><img src="images/portfolio/b.jpg" alt="alt" /></a>
-      <figcaption> <a href="#">
-        <h3 class="heading">Retro Movie</h3>
-        </a>
-        <p class="bioquote">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. </p>
-      </figcaption>
-    </figure>
-  </div>
-  <!-- one_third ends here -->
-  <div class="one_third lastcolumn">
-    <figure class="shadow"><a href="#" class="thumb"><img src="images/portfolio/c.jpg" alt="alt" /></a>
-      <figcaption> <a href="#">
-        <h3 class="heading">Retro Movie</h3>
-        </a>
-        <p class="bioquote">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. </p>
-      </figcaption>
-    </figure>
-  </div>
-  <!-- one_third ends here --> 
-</div>
-<!-- end container --> 
-<!--Heading Box ==================================================
+<!-- Portfolio ==================================================
 ================================================== -->
+<div class="container portfolio">
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/belleza.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Belleza</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/ropaDama.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Ropa para dama</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third lastcolumn shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/ropaCaba.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Ropa para caballero</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/ropaI.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Ropa infantil</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/juguetes.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Juguetes</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third lastcolumn shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/lineaBlanca.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Línea blanca</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/deporte.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Deportes</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/computacion.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Computación</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third lastcolumn shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/muebles.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Muebles</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/tecnologia.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Tecnología</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/salud.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Salud</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third-->
+  <div class="one_third lastcolumn shadow">
+    <div class="view view-first"> <img alt="" src="<s:url value='/images/portafolio/hogar.jpg'/>"/>
+      <div class="mask">
+        <h2><a href="#">Hogar</a></h2>
+      </div>
+      <!-- mask ends here --> 
+    </div>
+    <!-- view ends here --> 
+  </div>
+  <!--end one_third--> 
+</div>
+
 <div class="headingblock">
  
 </div>
@@ -212,23 +325,7 @@
 <!-- end container --> 
 <!-- Socialize ==================================================
 ================================================== -->
-<hr class="separator2">
-<div class="socialsblock">
-  <div class="container socialize">
-    <h3>Socialize with us!</h3>
-    <section class="socials">
-      <ul class="socials">
-        <li><a href="#"><img src="images/socials/twitter.png" alt="" /></a></li>
-        <li><a href="#"><img src="images/socials/facebook.png" alt="" /></a></li>
-        <li><a href="#"><img src="images/socials/dribbble.png" alt="" /></a></li>
-        <li><a href="#"><img src="images/socials/google+.png" alt="" /></a></li>
-        <li><a href="#"><img src="images/socials/linkedin.png" alt="" /></a></li>
-        <li><a href="#"><img src="images/socials/youtube.png" alt="" /></a></li>
-      </ul>
-    </section>
-  </div>
-  <!-- container ends here --> 
-</div>
+
 <!-- socialsblock ends here --> 
 <!-- Footer ==================================================
 ================================================== -->
@@ -296,15 +393,17 @@
 <!-- Main js files --> 
 <script src="<s:url value='/js/screen.js'/>" type="text/javascript"></script> 
 <!-- Tabs --> 
-<script src="<s:url value='/js/tabs.js'/>"type="text/javascript"></script> 
+<script src="<s:url value='/js/tabs.js'/>" type="text/javascript"></script> 
 <!-- Include prettyPhoto --> 
 <script src="<s:url value='/js/jquery.prettyPhoto.js'/>" type="text/javascript"></script> 
 <!-- Include Superfish --> 
 <script src="<s:url value='/js/superfish.js'/>" type="text/javascript"></script> 
 <script src="<s:url value='/js/hoverIntent.js'/>" type="text/javascript"></script> 
 <!-- Flexslider --> 
-<script src="<s:url value='/js/jquery.flexslider-min.js'/>"type="text/javascript"></script> 
+<script src="<s:url value='/js/jquery.flexslider-min.js'/>" type="text/javascript"></script> 
 <!-- Modernizr --> 
 <script type="text/javascript" src="<s:url value='/js/modernizr.custom.29473.js'/>"></script>
+<script src="<s:url value='/Admin/js/login.js'/>" type="text/javascript"></script> 
+
 </body>
 </html>
