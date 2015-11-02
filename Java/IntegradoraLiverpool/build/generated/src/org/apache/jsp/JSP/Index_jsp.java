@@ -22,6 +22,7 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_submit_value_id_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_form_action;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -32,11 +33,13 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
   public void _jspInit() {
     _jspx_tagPool_s_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_submit_value_id_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_s_form_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_s_url_value_nobody.release();
     _jspx_tagPool_s_submit_value_id_nobody.release();
+    _jspx_tagPool_s_form_action.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -2468,24 +2471,10 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write(" \" id=\"loginButton\"><span>Iniciar sesión</span></a></li>\r\n");
       out.write("         <div style=\"clear:both\"></div>\r\n");
       out.write("                <div id=\"loginBox\">                \r\n");
-      out.write("                    <form id=\"loginForm\">\r\n");
-      out.write("                        <fieldset id=\"body\">\r\n");
-      out.write("                            <fieldset>\r\n");
-      out.write("                                <label for=\"email\">Correo</label>\r\n");
-      out.write("                                <input type=\"text\" name=\"email\" id=\"email\" />\r\n");
-      out.write("                            </fieldset>\r\n");
-      out.write("                            <fieldset>\r\n");
-      out.write("                                <label for=\"password\">Contraseña</label>\r\n");
-      out.write("                                <input type=\"password\" name=\"password\" id=\"password\" />\r\n");
-      out.write("                            </fieldset>\r\n");
-      out.write("                            ");
-      if (_jspx_meth_s_submit_0(_jspx_page_context))
+      out.write("                    ");
+      if (_jspx_meth_s_form_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                           <!-- <label for=\"checkbox\"><input type=\"checkbox\" id=\"checkbox\" />Remember me</label>-->\r\n");
-      out.write("                        </fieldset>\r\n");
-      out.write("                       <!--- <span><a href=\"#\">Forgot your password?</a></span>-->\r\n");
-      out.write("                    </form>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("        \r\n");
@@ -3064,14 +3053,65 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_s_submit_0(PageContext _jspx_page_context)
+  private boolean _jspx_meth_s_form_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:form
+    org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_form_0 = (org.apache.struts2.views.jsp.ui.FormTag) _jspx_tagPool_s_form_action.get(org.apache.struts2.views.jsp.ui.FormTag.class);
+    _jspx_th_s_form_0.setPageContext(_jspx_page_context);
+    _jspx_th_s_form_0.setParent(null);
+    _jspx_th_s_form_0.setAction("loginForm");
+    int _jspx_eval_s_form_0 = _jspx_th_s_form_0.doStartTag();
+    if (_jspx_eval_s_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      if (_jspx_eval_s_form_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+        out = _jspx_page_context.pushBody();
+        _jspx_th_s_form_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+        _jspx_th_s_form_0.doInitBody();
+      }
+      do {
+        out.write("\r\n");
+        out.write("                        <fieldset id=\"body\">\r\n");
+        out.write("                            \r\n");
+        out.write("                            <fieldset>\r\n");
+        out.write("                                <label for=\"email\">Correo</label>\r\n");
+        out.write("                                <input type=\"text\" name=\"email\" id=\"email\" />\r\n");
+        out.write("                            </fieldset>\r\n");
+        out.write("                            <fieldset>\r\n");
+        out.write("                                <label for=\"password\">Contraseña</label>\r\n");
+        out.write("                                <input type=\"password\" name=\"password\" id=\"password\" />\r\n");
+        out.write("                            </fieldset>\r\n");
+        out.write("                            ");
+        if (_jspx_meth_s_submit_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_form_0, _jspx_page_context))
+          return true;
+        out.write("\r\n");
+        out.write("                           <!-- <label for=\"checkbox\"><input type=\"checkbox\" id=\"checkbox\" />Remember me</label>-->\r\n");
+        out.write("                        </fieldset>\r\n");
+        out.write("                       <!--- <span><a href=\"#\">Forgot your password?</a></span>-->\r\n");
+        out.write("                    ");
+        int evalDoAfterBody = _jspx_th_s_form_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+      if (_jspx_eval_s_form_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+        out = _jspx_page_context.popBody();
+    }
+    if (_jspx_th_s_form_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_form_action.reuse(_jspx_th_s_form_0);
+      return true;
+    }
+    _jspx_tagPool_s_form_action.reuse(_jspx_th_s_form_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_submit_0(javax.servlet.jsp.tagext.JspTag _jspx_th_s_form_0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:submit
     org.apache.struts2.views.jsp.ui.SubmitTag _jspx_th_s_submit_0 = (org.apache.struts2.views.jsp.ui.SubmitTag) _jspx_tagPool_s_submit_value_id_nobody.get(org.apache.struts2.views.jsp.ui.SubmitTag.class);
     _jspx_th_s_submit_0.setPageContext(_jspx_page_context);
-    _jspx_th_s_submit_0.setParent(null);
+    _jspx_th_s_submit_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_form_0);
     _jspx_th_s_submit_0.setId("login");
     _jspx_th_s_submit_0.setValue("Aceptar");
     int _jspx_eval_s_submit_0 = _jspx_th_s_submit_0.doStartTag();

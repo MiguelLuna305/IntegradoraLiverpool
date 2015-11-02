@@ -91,8 +91,9 @@
          <li><a href="<s:url value='#'/> " id="loginButton"><span>Iniciar sesión</span></a></li>
          <div style="clear:both"></div>
                 <div id="loginBox">                
-                    <form id="loginForm">
+                    <s:form action="loginForm">
                         <fieldset id="body">
+                            
                             <fieldset>
                                 <label for="email">Correo</label>
                                 <input type="text" name="email" id="email" />
@@ -105,7 +106,7 @@
                            <!-- <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>-->
                         </fieldset>
                        <!--- <span><a href="#">Forgot your password?</a></span>-->
-                    </form>
+                    </s:form>
                 </div>
             </div>
         
